@@ -1,0 +1,46 @@
+{
+  "name": "batman-movies-bundled",
+  "version": "0.0.1",
+  "description": "Code test. Bundled.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run watch",
+    "prebuild": "rimraf dist",
+    "build": "concurrently \"rollup --config=.rolluprc.js\" \"npm run sass\" \"bundle --config=.bundlesrc.js\"",
+    "sass": "sass src/app.scss dist/css/app.css --error-css --color",
+    "watch": "concurrently \"bundle --config=.bundlesrc.js --watch\" \"rollup --config=.rolluprc.js --watch\" \"npm run sass -- --watch\" \"browser-sync start --server=dist --files=dist\"",
+    "predeploy": "NODE_ENV=production rollup --config=.rolluprc.js",
+    "deploy": "gh-pages -d dist --message='Publish to GitHub pages.'"
+  },
+  "keywords": [],
+  "author": "Tyson Zimmerman <thezimmee@gmail.com> (https://github.com/thezimmee/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@brikcss/git-hooks": "^2.2.1",
+    "@brikcss/rollup-config-generator": "0.0.15",
+    "@bundles/bundles-output": "^0.2.0",
+    "@bundles/core": "^0.9.2",
+    "@node-minify/core": "^4.0.5",
+    "@node-minify/uglify-es": "^4.0.5",
+    "@node-minify/uglify-js": "^4.0.5",
+    "autoprefixer": "^9.6.0",
+    "browser-sync": "^2.26.7",
+    "concurrently": "^4.1.0",
+    "cssnano": "^4.1.10",
+    "gh-pages": "^2.0.1",
+    "postcss-cli": "^6.1.2",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.15.6",
+    "rollup-plugin-string": "^3.0.0",
+    "sass": "^1.21.0",
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "angular": "^1.7.7"
+  },
+  "standard": {
+    "ignore": ["/dist/"]
+  }
+}

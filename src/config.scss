@@ -1,0 +1,26 @@
+// -------------------------------------------------------------------------------------------------
+// Configuration.
+//
+
+// Colors.
+$c-movie: hsl(210, 15%, 92%);
+$c-movie__border: hsl(200, 6%, 20%);
+$c-filter: hsl(210, 14%, 97%);
+$c-filter--active: hsl(205, 74%, 40%);
+$c-filter__border: hsl(206, 13%, 79%);
+$c-separator: hsl(201, 8%, 59%);
+$c-text: hsl(200, 6%, 20%);
+$c-button: hsl(36, 94%, 63%);
+$c-gray: hsl(199, 8%, 58%);
+$c-white: hsl(0, 0%, 100%);
+
+// Height/Width.
+$w-container: 800px;
+$w-image: 120px;
+$w-image--wide: 208px;
+
+// Padding.
+$p: 14px;
+$p--s: 5px;
+$p--l: 25px;
+$p--xl: 40px;
