@@ -38,7 +38,7 @@
     "standard": "^12.0.1"
   },
   "dependencies": {
-    "angular": "^1.7.7"
+    "angular": "^1.8.0"
   },
   "standard": {
     "ignore": ["/dist/"]
