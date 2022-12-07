@@ -17,7 +17,7 @@
   "author": "Tyson Zimmerman <thezimmee@gmail.com> (https://github.com/thezimmee/)",
   "license": "MIT",
   "devDependencies": {
-    "@brikcss/git-hooks": "^2.2.1",
+    "@brikcss/git-hooks": "^3.0.1",
     "@brikcss/rollup-config-generator": "0.0.15",
     "@bundles/bundles-output": "^0.2.0",
     "@bundles/core": "^0.9.2",
